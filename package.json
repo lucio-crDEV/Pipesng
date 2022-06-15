@@ -27,6 +27,7 @@
     "@capacitor/haptics": "1.1.4",
     "@capacitor/keyboard": "1.2.2",
     "@capacitor/status-bar": "1.0.8",
+    "primeflex": "^3.2.1",
     "primeicons": "^5.0.0",
     "primeng": "^13.3.3",
     "rxjs": "~7.4.0",

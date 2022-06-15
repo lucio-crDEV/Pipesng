@@ -1,13 +1,21 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRouterModule } from './app-router.module';
-import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
 
+import { AppRouterModule } from './app-router.module';
+import { SharedModule } from './shared/shared.module';
+import { VentasModule } from './ventas/ventas.module';
+
+
 // PrimeNg
 
+
+
+// Cambiar el locale de la app / registra idioma
+import localEs from "@angular/common/locales/es-CL";
+import { registerLocaleData } from "@angular/common";
+registerLocaleData(localEs)
 
 @NgModule({
   declarations: [
@@ -16,9 +24,12 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRouterModule,
-    SharedModule
+    SharedModule,
+    VentasModule
   ],
-  providers: [],
+  providers: [
+    {provide: LOCALE_ID, useValue: 'es-CL'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
