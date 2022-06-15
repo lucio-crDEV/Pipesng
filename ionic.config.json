@@ -1,0 +1,7 @@
+{
+  "name": "pipes-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}
